@@ -21,11 +21,11 @@ public class Main {
 	    			newStep();
 	    		}
 	    		
-    System.out.print("\nЧисло шагов = " + step);
-    System.out.print("\nДлина цикла = " + lenghtCycle);
+    System.out.print("\nР§РёСЃР»Рѕ С€Р°РіРѕРІ = " + step);
+    System.out.print("\nР”Р»РёРЅР° С†РёРєР»Р° = " + lenghtCycle);
 	}
 	
-	static void newStep() {//Новый шаг
+	static void newStep() {//РќРѕРІС‹Р№ С€Р°Рі
 		
 		int index = searchIndex(array);
 		int valueMax = array[index];
@@ -44,7 +44,7 @@ public class Main {
 		checkList(array);
 	}
 	
-	static int searchIndex(int[] newArray) {//Нахождение индекса ячейки с макс. значением
+	static int searchIndex(int[] newArray) {//РќР°С…РѕР¶РґРµРЅРёРµ РёРЅРґРµРєСЃР° СЏС‡РµР№РєРё СЃ РјР°РєСЃ. Р·РЅР°С‡РµРЅРёРµРј
 		
 		int indexMaxValue = 0;
 		int maxValue = newArray[indexMaxValue];
@@ -58,12 +58,12 @@ public class Main {
 		return indexMaxValue;
 	}
 	
-	static void addList(int[] newArray) {//Добавляем новый массив в список массивов, найденные ранее
+	static void addList(int[] newArray) {//Р”РѕР±Р°РІР»СЏРµРј РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ РІ СЃРїРёСЃРѕРє РјР°СЃСЃРёРІРѕРІ, РЅР°Р№РґРµРЅРЅС‹Рµ СЂР°РЅРµРµ
 		numberArray++;
 		listArrays.add(newArray.clone());
 	}
 	
-	static boolean checkList(int[] newArray) {//Поиск одинаковых комбинаций значений
+	static boolean checkList(int[] newArray) {//РџРѕРёСЃРє РѕРґРёРЅР°РєРѕРІС‹С… РєРѕРјР±РёРЅР°С†РёР№ Р·РЅР°С‡РµРЅРёР№
 		for(int a =0; a<numberArray; a++)
 		{			
 			if(Arrays.equals(listArrays.get(a), newArray)) {
